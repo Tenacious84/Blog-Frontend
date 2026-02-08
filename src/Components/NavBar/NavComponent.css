@@ -1,0 +1,85 @@
+.navContainer {
+    display: flex;
+    background: linear-gradient(to bottom,
+            rgb(124, 58, 237),
+            /* purple-600 */
+            rgb(167, 139, 250),
+            /* purple-400 */
+            rgb(192, 132, 252)
+            /* pinkish-purple */
+        );
+    width: 100%;
+    height: 40px;
+    padding-top: 10px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding-left: 20px;
+    font-size: large;
+
+
+}
+
+.link:focus {
+    color: blue;
+}
+
+.link:hover {
+    color: white;
+}
+
+.logo h1 {
+    font-size: 30px;
+    /* smaller, fits navbar */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: rgb(81, 6, 81);
+}
+
+.logo img {
+    height: 30px;
+    /* constrain icon size */
+    margin: 0 5px;
+    /* spacing between letters and icon */
+}
+
+button {
+    background-color: pink;
+    border: none;
+}
+
+.right-align {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: underline;
+    font-size: large;
+    padding-right: 40px;
+}
+
+.WithoutToken {
+    padding-right: 50px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .navContainer .logo{
+    background: greenyellow;
+    height: 40px; /* adjust based on your navbar height */
+/* object-fit: contain;
+    margin-top: 0px;
+    padding: 0px;
+    margin-left: 20px; */
+/* }  */
+
+/* linear-gradient( */
+/* to bottom,      top to bottom gradient */
+/* #7c3aed,        purple-600 */
+/* #a78bfa,        purple-400 */
+/* #c084fc         pinkish-purple for a soft finish */
+/* ); */

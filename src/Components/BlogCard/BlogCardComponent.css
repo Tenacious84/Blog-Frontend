@@ -1,0 +1,37 @@
+.cards {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    height: 400px;
+    width: 300px;
+    border: 5px solid pink;
+    border-radius: 40px;
+    padding: 8px;
+    background-color: black;
+    box-shadow: 5px 5px 8px cyan, 10px 10px 8px purple, 15px 15px 8px green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+
+}
+
+.image {
+    height: 50%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+h1 {
+    font-size: medium;
+    color: rgb(221, 0, 255);
+}
+
+h2 {
+    font-size: smaller;
+    color: white;
+}

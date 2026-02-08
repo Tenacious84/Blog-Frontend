@@ -1,0 +1,63 @@
+
+.mainContent {
+    padding-top: 60px;
+    /* navbar height + some spacing */
+    color: black;
+}
+
+.inputs {
+    display:block;
+}
+
+input{
+    display:block
+}
+
+.createBlog{  
+    margin-top: 50px;
+    justify-self: center;  
+    height: 500px;
+    width: 400px;
+    border: 5px solid black;
+    border-radius: 40px;
+    padding: 30px;background-color: black;
+   box-shadow: 5px 5px 8px cyan, 10px 10px 8px purple, 15px 15px 8px green;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   h1{
+    font-size: x-large;
+   }
+   input{
+    width:350px;
+    margin:20px;
+    height: 40px;
+    border-radius: 40px;
+   }
+   /* form{
+    width:350px;
+    margin:20px;
+    height: 40px;
+    border-radius: 40px;
+   } */
+   
+.publishButton{
+    width:100px;
+    height:40px;
+   display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 30px;
+  background-color:  blueviolet;
+}
+.content{
+     width:350px;
+   margin-left: 20px;
+   height: 100px;
+    border-radius: 30px;
+    padding: 10px 12px;
+margin-bottom: 20px;
+}
+  .img{
+    color: blueviolet;
+  
+}
+}
