@@ -18,7 +18,7 @@ function MyBlogs() {
     }, [])
 
     return (
-        <div> {`Welcome ${blogs.author}`}
+        <div> {`Welcome ${blogs.author.author}`}
 
             {
                 blogs.map((b) => (
