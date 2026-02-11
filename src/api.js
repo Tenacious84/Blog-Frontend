@@ -13,6 +13,7 @@ API.interceptors.request.use((req) => {
 
 export const registerUser = (data) => API.post('/user/register', data)
 export const loginUser = (data) => API.post('/user/login', data)
+export const getUser = () => API.post('/user/v')
 
 export const getAllBlogs = () => API.get('/blog')
 export const getBlog = (id) => API.get(`/blog/${id}`)

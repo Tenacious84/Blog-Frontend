@@ -14,7 +14,7 @@ function Register() {
             const res = await registerUser({ author, email, password })
             localStorage.setItem('token', res.data.response)
             window.location.href = '/createBlog'
-             alert('Registration Successful!')
+            alert('Registration Successful!')
         }
         catch (err) {
             alert('Registration failed !')
@@ -23,22 +23,22 @@ function Register() {
         setAuthor('')
         setEmail('')
         setPassword('')
-        
+
     }
 
 
     return (
         <div className='mainContent'>
 
-           <div className="registerCard">
-            <h1>LET'S GET STARTED</h1>
-             <div className='inputs'>
-                <input type="string" onChange={(e) => setAuthor(e.target.value)} placeholder='      Username...' value={author} />
-                <input type="email" onChange={(e) => setEmail(e.target.value)} placeholder='      Email...' value={email} />
-                <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder='      Password...' value={password} />
+            <div className="registerCard">
+                <h1>LET'S GET STARTED</h1>
+                <div className='inputs'>
+                    <input type="string" onChange={(e) => setAuthor(e.target.value)} placeholder='      Username...' value={author} />
+                    <input type="email" onChange={(e) => setEmail(e.target.value)} placeholder='      Email...' value={email} />
+                    <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder='      Password...' value={password} />
+                </div>
+                <button className='registerButton' onClick={handleRegistration}> Register </button>
             </div>
-            <button className='registerButton' onClick={handleRegistration}> Register </button>
-           </div>
         </div>
     )
 }

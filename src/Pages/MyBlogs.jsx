@@ -8,7 +8,7 @@ function MyBlogs() {
     useEffect(() => {
 
         async function load() {
-            res = await getMyBlogs()
+            const res = await getMyBlogs()
             setBlogs(res.data)
             console.log(res.data)
         }
@@ -18,7 +18,7 @@ function MyBlogs() {
     }, [])
 
     return (
-        <div> {`Welcome ${blogs.author.author}`}
+        <div> {`Welcome ${blogs?.author}`}
 
             {
                 blogs.map((b) => (
