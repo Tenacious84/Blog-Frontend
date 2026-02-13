@@ -1,14 +1,7 @@
 body {
-  background: linear-gradient(to bottom,
-      /* top to bottom gradient */
-      #7c3aed,
-      /* purple-600 */
-      #a78bfa,
-      /* purple-400 */
-      #c084fc
-      /* pinkish-purple for a soft finish */
-    );
-    color:black;
+  background:#F8F7F4, ;
+  
+    color:#2B2B2B;
 
   min-height: 100vh;
   margin: 0;
@@ -22,6 +15,15 @@ body {
   padding: 2rem;
   text-align: center;
 }
+  background: linear-gradient(to bottom,
+      
+     #F8F7F4,
+
+     #5F7161,
+    
+      #8AA399
+   
+    );
 
 .logo {
   height: 6em;

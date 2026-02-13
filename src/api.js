@@ -21,5 +21,7 @@ export const getBlog = (id) => API.get(`/blog/${id}`)
 const token = localStorage.getItem('token')
 export const createBlog = (formData) => API.post('/blog/createBlog', formData, { headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" } })
 export const updateBlog = (id) => API.put(`/blog/updateBlog/${id}`)
-export const deleteBlog = (id) => API.delete(`/blog/deleteBlog/${id}`)
+export const deleteBlog = (id) => API.delete(`/blog/${id}`)
+
+
 export const getMyBlogs = () => API.get('/blog/myBlogs')

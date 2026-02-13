@@ -4,6 +4,10 @@ import BlogCard from '../Components/BlogCard/BlogCardComponent';
 
 function MyBlogs() {
     const [blogs, setBlogs] = useState([])
+    const [currentUser] = useState(() => {
+        const user = localStorage.getItem('user')
+        return user ? JSON.parse(user) : null
+    })
 
     useEffect(() => {
 
@@ -14,20 +18,19 @@ function MyBlogs() {
         }
 
         load()
-        console.log(blogs.author)
     }, [])
 
     return (
-        <div> {`Welcome ${blogs?.author}`}
+        <div className='mainContent'>
+            <h1>Welcome {currentUser?.author}</h1>
 
-            {
-                blogs.map((b) => (
-                    <BlogCard blog={b} key={b._id} />
-                ))
-            }
+            <div className="allcards">
+                {blogs.map((b) => (
+                    <BlogCard blog={b} key={b._id} currentUser={currentUser} />
+                ))}
+            </div>
         </div>
     )
 }
 
 export default MyBlogs
-
