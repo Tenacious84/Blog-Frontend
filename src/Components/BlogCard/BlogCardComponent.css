@@ -15,14 +15,21 @@
     background-color: #090f35;
     box-shadow: 5px 5px 8px cyan, 10px 10px 8px purple, 15px 15px 8px green;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-h1 {
-    font-size: medium;
-    color:aliceblue;
-}
-h2 {
-    font-size: smaller;
-    color:aliceblue;
-}
+
+    h1 {
+        font-size: medium;
+        color: aliceblue;
+    }
+
+    h2 {
+        font-size: smaller;
+        color: rgb(25, 110, 184);
+    }
+
+    h3 {
+        font-size: smaller;
+        color: white
+    }
 
 }
 
@@ -34,7 +41,7 @@ h2 {
 
 h1 {
     font-size: medium;
-    color:#2b2b2b;
+    color: #2b2b2b;
 }
 
 

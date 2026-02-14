@@ -2,12 +2,14 @@ import { React, useEffect, useState } from 'react'
 import { getMyBlogs } from "../api";
 import BlogCard from '../Components/BlogCard/BlogCardComponent';
 
+
 function MyBlogs() {
     const [blogs, setBlogs] = useState([])
     const [currentUser] = useState(() => {
         const user = localStorage.getItem('user')
         return user ? JSON.parse(user) : null
     })
+
 
     useEffect(() => {
 
@@ -26,7 +28,7 @@ function MyBlogs() {
 
             <div className="allcards">
                 {blogs.map((b) => (
-                    <BlogCard blog={b} key={b._id} currentUser={currentUser} />
+                    <BlogCard blog={b} key={b._id} currentUser={currentUser} showActions={true} />
                 ))}
             </div>
         </div>

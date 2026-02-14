@@ -5,10 +5,11 @@ import App from './App.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Pages/Home.jsx';
 import Login from './Pages/Login.jsx';
+import MyBlogs from './Pages/MyBlogs.jsx';
+import MyDashBoard from './Pages/MyDashBoard.jsx';
 import Register from './Pages/Register.jsx';
 import BlogDetails from './Pages/BlogDetails.jsx';
-import MyDashBoard from './Pages/myDashBoard.jsx';
-import MyBlogs from './Pages/myBlogs.jsx';
+import UpdateBlog from './Pages/updateBlog.jsx';
 
 const router = createBrowserRouter([
   {
@@ -38,10 +39,14 @@ const router = createBrowserRouter([
       {
         path: 'createBlog',
         element: <MyDashBoard />
-      }
+      },
+      {
+        path: 'updateBlog/:id',
+        element: <UpdateBlog />
+      },
     ]
   }
-]);
+])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

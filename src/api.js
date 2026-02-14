@@ -13,14 +13,14 @@ API.interceptors.request.use((req) => {
 
 export const registerUser = (data) => API.post('/user/register', data)
 export const loginUser = (data) => API.post('/user/login', data)
-export const getUser = () => API.post('/user/v')
+export const getUser = () => API.post('/user')
 
 export const getAllBlogs = () => API.get('/blog')
 export const getBlog = (id) => API.get(`/blog/${id}`)
 
 const token = localStorage.getItem('token')
-export const createBlog = (formData) => API.post('/blog/createBlog', formData, { headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" } })
-export const updateBlog = (id) => API.put(`/blog/updateBlog/${id}`)
+export const createBlog = (formData) => API.post('/blog/createBlog', formData)
+export const updateBlog = (id, data) => API.put(`/blog/updateBlog/${id}`, data)
 export const deleteBlog = (id) => API.delete(`/blog/${id}`)
 
 

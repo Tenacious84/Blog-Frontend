@@ -51,7 +51,7 @@ function MyDashBoard() {
   return (
     <div className="mainContent">
       <div className="createBlog">
-        <h1>LET&apos;S CREATE SOME EXCITING BLOGS!</h1>
+        <h1>     LET&apos;S CREATE SOME EXCITING BLOGS !</h1>
 
         <form
           className="inputs"

@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import "../BlogCard/BlogCardComponent.css";
 import { deleteBlog } from '../../api';
 
-function BlogCard({ blog, currentUser }) {
+
+
+function BlogCard({ blog, currentUser, showActions }) {
   // Handle author as string or object
   const blogAuthorId =
     typeof blog.author === 'string' ? blog.author : blog.author?._id;
-  
+
   const isOwner =
     currentUser?._id?.toString() === blogAuthorId?.toString();
 
@@ -43,13 +45,13 @@ function BlogCard({ blog, currentUser }) {
         <div className="cardContent">
           <h1>{blog.title}</h1>
           <h2>{blog.subtitle}</h2>
-          <h3>{typeof blog.author === 'string' ? "Author" : blog.author?.author}</h3>
+          <h3>Author: {typeof blog.author === 'string' ? "Author" : blog.author?.author} </h3>
 
           <Link to={`/blog/${blog._id}`} className="readMore">
             Read more →
           </Link>
 
-          {isOwner && (
+          {isOwner && showActions === true && (
             <div className="cardButtons">
               <button className='delete' onClick={handleDelete}>Delete</button>
               <Link to={`/updateBlog/${blog._id}`}>

@@ -34,7 +34,7 @@ function Home() {
       ) : (
         <div className="allcards">
           {blogs.map((blog) => (
-            <BlogCard blog={blog} key={blog._id} currentUser={currentUser} />
+            <BlogCard blog={blog} key={blog._id} currentUser={currentUser} showActions={false} />
           ))}
         </div>
       )}
