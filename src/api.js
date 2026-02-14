@@ -17,6 +17,7 @@ export const getUser = () => API.post('/user')
 
 export const getAllBlogs = () => API.get('/blog')
 export const getBlog = (id) => API.get(`/blog/${id}`)
+export const likeBlog = (id) => API.post(`/blog/${id}`)
 
 const token = localStorage.getItem('token')
 export const createBlog = (formData) => API.post('/blog/createBlog', formData)

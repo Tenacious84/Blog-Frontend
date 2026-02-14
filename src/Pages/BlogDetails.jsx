@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import '../Pages/BlogDetails.css'
-import { getBlog } from '../api'
+import { getBlog, likeBlog } from '../api'
 
 function BlogDetails() {
   const [blog, setBlog] = useState('')
@@ -25,6 +25,18 @@ function BlogDetails() {
     load()
 
   }, [id])
+  const handleLike = async () => {
+    try {
+      if (!token) return alert.info("Please login to like");
+      const res = await likeBlog()
+
+      setLiked(res.blog.likes);
+      setLikesCount(res.data.likesCount);
+    } catch (err) {
+      console.error(err);
+      toast.error(err.response?.data?.message || "Failed to like post");
+    }
+  };
   return (
     <div className='mainContent'>
 
@@ -33,6 +45,9 @@ function BlogDetails() {
       <h2>{blog?.subtitle}</h2>
       <h2>{blog?.author}</h2>
       <h1>{blog?.content}</h1>
+      <button className="heart">
+
+      </button>
 
     </div>
   )
