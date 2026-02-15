@@ -1,50 +1,49 @@
-import React, { useState, useEffect } from 'react';
-import '../Pages/myDashBoard.css';
-import { createBlog } from '../api';
+import React, { useState, useEffect } from 'react'
+import '../Pages/myDashBoard.css'
+import { createBlog } from '../api'
 
 function MyDashBoard() {
-  const [title, setTitle] = useState('');
-  const [subtitle, setSubtitle] = useState('');
-  const [content, setContent] = useState('');
-  const [image, setImage] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [title, setTitle] = useState('')
+  const [subtitle, setSubtitle] = useState('')
+  const [content, setContent] = useState('')
+  const [image, setImage] = useState(null)
+  const [loading, setLoading] = useState(false)
 
-  // Redirect to login if no token found
+
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem('token')
     if (!token) {
-      alert('Please log in first.');
-      window.location.href = '/login';
+      alert('Please log in first.')
+      window.location.href = '/login'
     }
   }, []);
 
   const handleCreateBlog = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+    e.preventDefault()
+    setLoading(true)
 
     try {
-      // Prepare form data
-      const formData = new FormData();
-      formData.append('title', title);
-      formData.append('subtitle', subtitle);
-      formData.append('content', content);
-      // ✅ REMOVED: formData.append('author', user._id)
-      // The backend gets the author from req.user (JWT token) automatically
+
+      const formData = new FormData()
+      formData.append('title', title)
+      formData.append('subtitle', subtitle)
+      formData.append('content', content)
+
 
       if (image) {
-        formData.append('image', image); // attach file if exists
+        formData.append('image', image)
       }
 
-      // Send to backend
-      await createBlog(formData);
+      
+      await createBlog(formData)
 
-      alert('Blog created successfully!');
-      window.location.href = '/myBlogs'; // go to user blogs after creation
+      alert('Blog created successfully!')
+      window.location.href = '/myBlogs'
     } catch (err) {
-      console.error(err);
-      alert('Failed to create blog!');
+      console.error(err)
+      alert('Failed to create blog!')
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
   };
 
@@ -53,42 +52,14 @@ function MyDashBoard() {
       <div className="createBlog">
         <h1>     LET&apos;S CREATE SOME EXCITING BLOGS !</h1>
 
-        <form
-          className="inputs"
-          encType="multipart/form-data"
-          onSubmit={handleCreateBlog}
-        >
-          <input
-            type="text"
-            placeholder="Title..."
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            required
-          />
+        <form className="inputs" encType="multipart/form-data" onSubmit={handleCreateBlog} >
+          <input type="text" placeholder="Title..." value={title} onChange={(e) => setTitle(e.target.value)} required />
 
-          <input
-            type="text"
-            placeholder="Subtitle..."
-            value={subtitle}
-            onChange={(e) => setSubtitle(e.target.value)}
-            required
-          />
+          <input type="text" placeholder="Subtitle..." value={subtitle} onChange={(e) => setSubtitle(e.target.value)} required />
 
-          <textarea
-            rows="5"
-            placeholder="Write your message here..."
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            className="content"
-            required
-          />
+          <textarea rows="5" placeholder="Write your message here..." value={content} onChange={(e) => setContent(e.target.value)} className="content" required />
 
-          <input
-            type="file"
-            accept="image/*"
-            onChange={(e) => setImage(e.target.files[0])}
-            className="img"
-          />
+          <input type="file" accept="image/*" onChange={(e) => setImage(e.target.files[0])} className="img" />
 
           <button type="submit" className="publishButton">
             {loading ? 'Publishing...' : 'Publish Blog'}

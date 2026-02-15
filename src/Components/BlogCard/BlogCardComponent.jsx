@@ -53,7 +53,7 @@ function BlogCard({ blog, currentUser, showActions }) {
 
           {isOwner && showActions === true && (
             <div className="cardButtons">
-              <button className='delete' onClick={handleDelete}>Delete</button>
+              <button className='delete' onClick={handleDelete}> Delete </button>
               <Link to={`/updateBlog/${blog._id}`}>
                 <button className='update'>Update</button>
               </Link>

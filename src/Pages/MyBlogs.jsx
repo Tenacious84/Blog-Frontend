@@ -24,7 +24,7 @@ function MyBlogs() {
 
     return (
         <div className='mainContent'>
-            <h1>Welcome {currentUser?.author}</h1>
+            <h1>Welcome back {currentUser?.author}!</h1>
 
             <div className="allcards">
                 {blogs.map((b) => (

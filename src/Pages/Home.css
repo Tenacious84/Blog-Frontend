@@ -1,24 +1,31 @@
 .mainContent {
-  padding-top: 60px; /* navbar height + spacing */
+  padding-top: 60px;
+ 
   color: black;
   display: flex;
   flex-direction: column;
-  align-items: center; /* center the content horizontally */
+  align-items: center;
+
 }
 
-/* Container for all cards */
+
 .allcards {
+  margin-top: 50px;
   display: flex !important;
   flex-wrap: wrap !important;
   gap: 16px !important;
 
-  /* Add these for proper spacing */
-  justify-content: center; /* center cards horizontally */
-  max-width: 1200px; /* optional: limit width of cards container */
+  
+  justify-content: center;
+  
+  max-width: 1100px;
+  
 }
 
-/* Card wrapper */
+
 .cards {
-  flex: 0 1 300px; /* width 300px, can shrink */
-  margin: 0; /* remove extra margin if any */
+  flex: 0 1 300px;
+  
+  margin: 0;
+  
 }

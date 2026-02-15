@@ -9,7 +9,7 @@ import MyBlogs from './Pages/MyBlogs.jsx';
 import MyDashBoard from './Pages/MyDashBoard.jsx';
 import Register from './Pages/Register.jsx';
 import BlogDetails from './Pages/BlogDetails.jsx';
-import UpdateBlog from './Pages/updateBlog.jsx';
+import UpdateBlog from './Pages/UpdateBlog.jsx';
 
 const router = createBrowserRouter([
   {

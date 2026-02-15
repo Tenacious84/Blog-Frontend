@@ -1,4 +1,45 @@
 .mainContent {
-  padding-top: 60px; /* navbar height + some spacing */
-     color:black;
+  padding-top: 60px;
+  /* navbar height + some spacing */
+  color: black;
+}
+
+.heart {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.heart:hover {
+  transform: scale(1.2);
+  
+}
+
+span {
+  margin: 18px;
+}
+
+.author-like {
+  width: 50vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blogImage {
+  justify-content: center;
+  width: 50vw;
+  height: 45vh;
+}
+
+.title {
+  font-size: xx-large;
+
+}
+.blogContent{
+  margin: 0 auto;
+  width: 80vw;
+  height: fit-content;
 }

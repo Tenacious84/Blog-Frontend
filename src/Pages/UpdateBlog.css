@@ -1,4 +1,3 @@
-
 .mainContent {
     padding-top: 60px;
     /* navbar height + some spacing */
@@ -7,57 +6,75 @@
 
 
 
-input{
-    display:block
+input {
+    display: block
 }
 
-.updateBlog{  
+.updateBlog {
     margin-top: 50px;
-    justify-self: center;  
+    justify-self: center;
     height: 500px;
     width: 400px;
     border-radius: 40px;
     padding: 30px;
     background-color: #090f35;
-   box-shadow: 5px 5px 8px cyan, 10px 10px 8px purple, 15px 15px 8px green;
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   h1{
-    font-size: x-large;
-    color: antiquewhite;
-    padding-left: 30px;
-   }
-   input{
-    width:350px;
-    margin:20px;
-    height: 40px;
-    border-radius: 40px;
-   }
-   /* form{
+    box-shadow: 5px 5px 8px cyan, 10px 10px 8px purple, 15px 15px 8px green;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    h1 {
+        font-size: x-large;
+        color: antiquewhite;
+        padding-left: 30px;
+    }
+
+    input {
+        width: 350px;
+        margin: 20px;
+        height: 40px;
+        border-radius: 40px;
+    }
+
+    /* form{
     width:350px;
     margin:20px;
     height: 40px;
     border-radius: 40px;
    } */
-   
-.publishButton{
-    width:100px;
-    height:40px;
-   display: block;
-  margin: 0 auto;
-  margin-top: 50px;
-  border-radius: 30px;
-  background-color:  rgb(25, 110, 184);
+
+    .publishButton {
+        width: 100px;
+        height: 40px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 50px;
+        border-radius: 30px;
+        background-color: rgb(25, 110, 184);
+    }
+
+    .content {
+        width: 350px;
+        margin-left: 20px;
+        height: 100px;
+        border-radius: 30px;
+        padding: 10px 12px;
+        margin-bottom: 20px;
+    }
+
+    .img {
+        color: rgb(25, 110, 184);
+
+    }
 }
-.content{
-     width:350px;
-   margin-left: 20px;
-   height: 100px;
-    border-radius: 30px;
-    padding: 10px 12px;
-margin-bottom: 20px;
+
+.updateButton {
+    margin-top: 30px;
+    background: green;
+    height: 30px;
+    width: 80px;
+    border-radius: 40px;
+    margin-left: 42%;
 }
-  .img{
-    color: rgb(25, 110, 184);
-  
-}
+
+.updateButton:hover {
+    background-color: rgb(25, 110, 184);
 }

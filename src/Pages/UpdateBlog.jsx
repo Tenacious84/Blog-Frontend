@@ -10,7 +10,7 @@ const UpdateBlog = () => {
         title: "",
         subtitle: "",
         content: "",
-        imgUrl: ""
+
     })
 
     const [loading, setLoading] = useState(true)
@@ -30,12 +30,14 @@ const UpdateBlog = () => {
         console.log(blogContent)
     }, [id])
     console.log(blogContent)
+
     const handleSubmit = async (e) => {
         e.preventDefault()
 
         try {
             await updateBlog(id, blogContent);
             alert("Blog updated successfully")
+            window.location = '/myBlogs'
         } catch (error) {
             console.log(error)
         }
@@ -67,23 +69,15 @@ const UpdateBlog = () => {
 
                     <textarea
                         className="content"
-                        required
                         value={blogContent.content}
                         onChange={(e) =>
-                            setBlogInfo({ ...blogContent, content: e.target.value })
-                        }
-                    />
-                    <input type="file"
-                        className="img"
-                        name="imgUrl"
-                        file={blogContent.imgUrl}
-                        onChange={(e) =>
                             setBlogContent({
-                                imgUrl: e.target.files[0]
+                                ...blogContent, content: e.target.value
                             })
                         }
                     />
-                    <button type="submit">
+
+                    <button type="submit" className="updateButton">
                         Update
                     </button>
                 </form>
