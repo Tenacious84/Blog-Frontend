@@ -10,7 +10,8 @@ function Register() {
 
   const navigate = useNavigate()
 
-  async function handleRegistration() {
+  async function handleRegistration(e) {
+    e.preventDefault()
     try {
       const res = await registerUser({ author, email, password })
 

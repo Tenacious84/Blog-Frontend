@@ -6,7 +6,8 @@ function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  async function handleLogin() {
+  async function handleLogin(e) {
+    e.preventDefault()
     try {
       const res = await loginUser({ email, password })
       console.log('Login response:', res)
@@ -38,23 +39,25 @@ function Login() {
     <div className="mainContent">
       <div className="loginCard">
         <h1>WELCOME BACK!</h1>
-        <div className="inputs">
-          <input
-            type="email"
-            placeholder="Email..."
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password..."
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button className="loginButton" onClick={handleLogin}>
-          Login
-        </button>
+        <form onSubmit={handleLogin}>
+          <div className="inputs">
+            <input
+              type="email"
+              placeholder="Email..."
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Password..."
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button className="loginButton" type='submit'>
+            Login
+          </button>
+        </form>
       </div>
     </div>
   );
