@@ -10,11 +10,13 @@
   font-size: 24px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  height: 60px;
 }
 
 .heart:hover {
   transform: scale(1.2);
-  
+  box-shadow: 5px 5px 8px cyan, 10px 10px 8px purple, 15px 15px 8px green;
+
 }
 
 span {
@@ -32,14 +34,20 @@ span {
   justify-content: center;
   width: 50vw;
   height: 45vh;
+  box-shadow: 5px 5px 8px cyan, 10px 10px 8px purple, 15px 15px 8px green;
 }
 
 .title {
   font-size: xx-large;
-
+text-decoration-style: double;
 }
-.blogContent{
+
+.blogContent {
   margin: 0 auto;
   width: 80vw;
   height: fit-content;
+}
+
+.subtitle{
+  text-decoration: underline;
 }

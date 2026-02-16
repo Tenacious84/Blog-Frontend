@@ -65,7 +65,7 @@ function BlogDetails() {
 
       <h1 className='title'>{blog?.title}</h1>
       < img className='blogImage' src={blog?.imgUrl} alt={blog?.title} />
-      <h2>{blog?.subtitle}</h2>
+      <h2 className='subtitle'>{blog?.subtitle}</h2>
       <div className="author-like">
         <h2>
           Author: {
