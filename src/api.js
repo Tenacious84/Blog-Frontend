@@ -22,6 +22,15 @@ API.interceptors.response.use(
             localStorage.removeItem("token")
             window.location.href = "/login"
         }
+
+        if (err.response?.status === 413) {
+            alert("Image must be under 5MB.");
+        } else if (err.response?.status === 415) {
+            alert("Only JPG, PNG, or WEBP images allowed.");
+        } else {
+            alert("Upload failed.");
+        }
+
         return Promise.reject(err)
     }
 
