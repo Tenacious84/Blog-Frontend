@@ -41,18 +41,8 @@ function Login() {
         <h1>WELCOME BACK!</h1>
         <form onSubmit={handleLogin}>
           <div className="inputs">
-            <input
-              type="email"
-              placeholder="Email..."
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-              type="password"
-              placeholder="Password..."
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <input type="email" placeholder="Email..." value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input type="password" placeholder="Password..." value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="current-password" />
           </div>
           <button className="loginButton" type='submit'>
             Login

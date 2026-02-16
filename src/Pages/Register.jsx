@@ -12,6 +12,7 @@ function Register() {
 
   async function handleRegistration(e) {
     e.preventDefault()
+
     try {
       const res = await registerUser({ author, email, password })
 
@@ -44,24 +45,9 @@ function Register() {
         <h1>LET'S GET STARTED</h1>
         <form onSubmit={handleRegistration}>
           <div className='inputs'>
-            <input
-              type="text"
-              onChange={(e) => setAuthor(e.target.value)}
-              placeholder='Username...'
-              value={author}
-            />
-            <input
-              type="email"
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder='Email...'
-              value={email}
-            />
-            <input
-              type="password"
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder='Password...'
-              value={password}
-            />
+            <input type="text" onChange={(e) => setAuthor(e.target.value)} placeholder='Username...' value={author} />
+            <input type="email" onChange={(e) => setEmail(e.target.value)} placeholder='Email...' value={email} />
+            <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder='Password...' value={password} autoComplete="current-password" />
           </div>
           <button className='registerButton' type='submit'>
             Register
