@@ -18,6 +18,7 @@
     background-color: #090f35;
     box-shadow: 5px 5px 8px cyan, 10px 10px 8px purple, 15px 15px 8px green;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: start;
 
     h1 {
         font-size: medium;

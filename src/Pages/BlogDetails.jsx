@@ -10,7 +10,7 @@ function BlogDetails() {
   const { id } = useParams()
   const [likesCount, setLikesCount] = useState(0)
   const user = JSON.parse(localStorage.getItem("user"))
-  const [liked, setLiked] = useState(false)
+
 
 
   console.log("ID from URL params:", id);
@@ -25,11 +25,9 @@ function BlogDetails() {
         setBlog(res.data)
         setLikesCount(res.data.likes?.length || 0)
 
-
-
       }
       catch (error) {
-        console.error("Error fetching blog:", err)
+        console.error("Error fetching blog:", error)
       }
 
     }
@@ -37,25 +35,29 @@ function BlogDetails() {
     load()
 
   }, [id])
-  const isLiked = blog?.likes?.includes(user._id)
+
   console.log(blog)
+
+
   const handleLike = async () => {
-    setLiked(prev => !prev)
     try {
       const token = localStorage.getItem('token')
       if (!token) {
         alert("Please login to like")
         return
       }
+
       const res = await likeBlog(id)
-      setLiked(prev => !prev)
+
+
+      setBlog(prev => ({
+        ...prev,
+        likes: res.data.likes
+      }))
 
       setLikesCount(res.data.likesCount)
-      console.log({
-        'Number of likes': likesCount,
-        'State': isLiked
-      })
-
+      console.log("Likes array:", blog.likes)
+      console.log("User ID:", user?._id)
     } catch (err) {
       console.error(err)
     }
@@ -75,7 +77,7 @@ function BlogDetails() {
           }
         </h2>
         <button className="heart" onClick={handleLike}>
-          <FaHeart color={isLiked ? "red" : "gray"} />
+          <FaHeart color={blog?.likes?.some(like => like.toString() === user?._id) ? "red" : "gray"} />
           <span>{likesCount}</span>
         </button>
       </div>
