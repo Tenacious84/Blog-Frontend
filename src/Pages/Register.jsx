@@ -23,7 +23,7 @@ function Register() {
 
       alert('Registration Successful! Please login.')
 
-      // Redirect to login page
+      
       navigate('/login')
     } catch (error) {
       if (error.response?.data?.error === "EMAIL_EXISTS") {
@@ -33,7 +33,7 @@ function Register() {
       console.error(err)
     }
 
-    // Clear form fields
+  
     setAuthor('')
     setEmail('')
     setPassword('')

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import '../Pages/myDashBoard.css'
 import { createBlog } from '../api'
 
@@ -16,7 +16,7 @@ function MyDashBoard() {
       alert('Please log in first.')
       window.location.href = '/login'
     }
-  }, []);
+  }, [])
 
   const handleCreateBlog = async (e) => {
     e.preventDefault()
@@ -34,7 +34,7 @@ function MyDashBoard() {
         formData.append('image', image)
       }
 
-      
+
       await createBlog(formData)
 
       alert('Blog created successfully!')
@@ -45,7 +45,7 @@ function MyDashBoard() {
     } finally {
       setLoading(false)
     }
-  };
+  }
 
   return (
     <div className="mainContent">
@@ -67,7 +67,7 @@ function MyDashBoard() {
         </form>
       </div>
     </div>
-  );
+  )
 }
 
-export default MyDashBoard;
+export default MyDashBoard

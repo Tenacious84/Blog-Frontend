@@ -4,7 +4,7 @@ import { getBlog, updateBlog } from "../api"
 import '../Pages/UpdateBlog.css'
 
 const UpdateBlog = () => {
-    const { id } = useParams();
+    const { id } = useParams()
 
     const [blogContent, setBlogContent] = useState({
         title: "",
@@ -35,7 +35,7 @@ const UpdateBlog = () => {
         e.preventDefault()
 
         try {
-            await updateBlog(id, blogContent);
+            await updateBlog(id, blogContent)
             alert("Blog updated successfully")
             window.location = '/myBlogs'
         } catch (error) {

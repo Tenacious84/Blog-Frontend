@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from 'react'
-import { getMyBlogs } from "../api";
-import BlogCard from '../Components/BlogCard/BlogCardComponent';
+import { getMyBlogs } from "../api"
+import BlogCard from '../Components/BlogCard/BlogCardComponent'
 
 
 function MyBlogs() {

@@ -1,37 +1,37 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import "../BlogCard/BlogCardComponent.css";
-import { deleteBlog } from '../../api';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import "../BlogCard/BlogCardComponent.css"
+import { deleteBlog } from '../../api'
 
 
 
 function BlogCard({ blog, currentUser, showActions }) {
-  // Handle author as string or object
+  
   const blogAuthorId =
-    typeof blog.author === 'string' ? blog.author : blog.author?._id;
+    typeof blog.author === 'string' ? blog.author : blog.author?._id
 
   const isOwner =
-    currentUser?._id?.toString() === blogAuthorId?.toString();
+    currentUser?._id?.toString() === blogAuthorId?.toString()
 
-  // 🔍 DEBUG
-  console.log('=== BLOG CARD DEBUG ===');
+  //  DEBUGGing
+  console.log('=== BLOG CARD DEBUG ===')
   console.log('Blog', blog)
-  console.log('Blog title:', blog.title);
-  console.log('Blog author:', blog.author);
-  console.log('Blog author ID:', blogAuthorId);
-  console.log('Current user ID:', currentUser?._id);
-  console.log('Is owner?:', isOwner);
-  console.log('=======================');
+  console.log('Blog title:', blog.title)
+  console.log('Blog author:', blog.author)
+  console.log('Blog author ID:', blogAuthorId)
+  console.log('Current user ID:', currentUser?._id)
+  console.log('Is owner?:', isOwner)
+  console.log('=======================')
 
   async function handleDelete(e) {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      await deleteBlog(blog._id);
-      alert("Blog deleted!");
-      window.location.reload();
+      await deleteBlog(blog._id)
+      alert("Blog deleted!")
+      window.location.reload()
     } catch (error) {
-      alert('Could not delete blog!');
-      console.error(error);
+      alert('Could not delete blog!')
+      console.error(error)
     }
   }
 
@@ -62,7 +62,7 @@ function BlogCard({ blog, currentUser, showActions }) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default BlogCard;
+export default BlogCard 

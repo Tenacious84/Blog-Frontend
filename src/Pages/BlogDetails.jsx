@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import '../Pages/BlogDetails.css'
 import { getBlog, likeBlog } from '../api'
-import { FaHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa"
 
 
 function BlogDetails() {
@@ -13,7 +13,7 @@ function BlogDetails() {
 
 
 
-  console.log("ID from URL params:", id);
+  console.log("ID from URL params:", id)
 
   useEffect(() => {
 
