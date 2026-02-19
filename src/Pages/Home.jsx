@@ -28,7 +28,7 @@ function Home() {
 
   return (
     <div className='mainContent'>
-      <h1 className="homeTitle">WELCOME TO THE HOMEPAGE</h1>
+      <h1 className="homeTitle">WELCOME TO BL🎞️GIT</h1>
       {blogs.length === 0 ? (
         <p className="noBlogs">No blogs found.</p>
       ) : (
