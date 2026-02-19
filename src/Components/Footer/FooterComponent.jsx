@@ -13,7 +13,7 @@ function Footer() {
                 </a>
 
                 <p className="copyright">
-                    © {new Date().getFullYear()} Tenacious Tech. All rights reserved.
+                    © {new Date().getFullYear()} BL🎞️GIT. All rights reserved.
                 </p>
             </div>
         </footer>
